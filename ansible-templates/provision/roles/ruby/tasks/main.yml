@@ -3,17 +3,17 @@
   apt: update_cache=yes cache_valid_time={{ 60*60*4 }}
   sudo: true
 
-- name: ruby2 | Make sure the ansible required dependencies are installed
+- name: Make sure the ansible required dependencies are installed
   apt:
     pkg: python-pycurl
     state: present
 
-- name: ruby2 | Add the ruby2 repository
+- name: Add the ruby2 repository
   apt_repository:
     repo: ppa:brightbox/ruby-ng
     state: present
 
-- name: ruby2 | Install the ruby2 package
+- name: Install the ruby2 package
   apt:
     pkg: ruby2.1
     state: present
