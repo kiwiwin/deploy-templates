@@ -1,0 +1,5 @@
+- hosts: general
+  sudo: yes
+  roles:
+    # - java: this has not been verified
+    - nodejs
