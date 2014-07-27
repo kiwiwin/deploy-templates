@@ -10,3 +10,4 @@ class { 'apt':
 
 include nodejs
 include java
+include ruby
