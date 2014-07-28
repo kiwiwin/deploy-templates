@@ -8,6 +8,7 @@ class { 'apt':
 	require => Exec['init-update']
 }
 
+include git
 include nodejs
 include java
 include ruby
