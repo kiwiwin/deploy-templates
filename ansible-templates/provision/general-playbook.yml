@@ -1,6 +1,7 @@
 - hosts: general-ansible
   sudo: yes
   roles:
+    - git
     - java
     - nodejs
     - ruby
