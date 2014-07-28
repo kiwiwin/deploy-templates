@@ -1,4 +1,4 @@
-- hosts: general
+- hosts: general-ansible
   sudo: yes
   roles:
     - java
