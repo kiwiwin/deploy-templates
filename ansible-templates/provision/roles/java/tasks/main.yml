@@ -1,10 +1,7 @@
 ---
 
-- name: Add JRE ppa
-  apt_repository: repo=ppa:webupd8team/java state=present
+- include: debian.yml
+  when: ansible_os_family == "Debian"
 
-- name: Automatically select the Oracle License
-  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-
-- name: Install JRE
-  apt: pkg=oracle-java8-installer state=latest update-cache=yes
+- include: redhat.yml
+  when: ansible_os_family == "RedHat"
